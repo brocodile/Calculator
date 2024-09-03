@@ -33,7 +33,7 @@ button{
 }
 
 #display{
-    border: 1px solid black;
+    border: 2px solid black;
     height: 100px;
     width: 530px;
     background-color:honeydew;
@@ -56,4 +56,15 @@ h1{
     display: flex;
     justify-content: center;
     align-items: end;
+}
+p{
+    color: grey;
+}
+#display{
+    display: flex;
+    justify-content: end;
+    font-size: 75px;
+    align-items: center;
+    padding-right: 10px;
+    border-radius: 25px;
 }
