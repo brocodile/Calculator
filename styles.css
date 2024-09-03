@@ -45,3 +45,15 @@ h1{
     font-size: 65px;
     text-align: center;
 }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
