@@ -36,7 +36,12 @@ numbers.forEach(btn => {
             display.textContent = firstNum;
         }else{
             // if operator is given
+            if(!lastNum){
+                lastNum = btn.textContent;
+            }else{
+                lastNum += btn.textContent;
+            }
+            display.textContent = lastNum;
         }
     })
-    
 });
