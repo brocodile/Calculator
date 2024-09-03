@@ -57,7 +57,7 @@ operators.forEach(btn => {
 const equal = document.querySelector("#equals");
 equal.addEventListener("click", () => {
     let result = operate(Number(firstNum), Number(lastNum), operator);
-    display.textContent = result;
+    display.textContent = result.toFixed(2);
 })
 
 const allClear = document.querySelector("#allClear");
