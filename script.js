@@ -19,7 +19,10 @@ function operate(num1, num2, op){
     if(op == "+") return add(num1,num2);
     if(op == "-") return sub(num1,num2);    
     if(op == "*") return multi(num1,num2);
-    if(op == "/") return divd(num1,num2);
+    if(op == "/") {
+        if(num2 == 0) {return "Error"}
+        return divd(num1,num2);
+    }
 }
 
 let display = document.querySelector("#disp");
@@ -66,7 +69,7 @@ operators.forEach(btn => {
 const equal = document.querySelector("#equals");
 equal.addEventListener("click", () => {
     let result = operate(Number(firstNum), Number(lastNum), operator);
-    display.textContent = result.toFixed(2);
+    display.textContent = typeof result == "string" ? result : result.toFixed(2);
     lastNum = null;
     operator = null;
     firstNum = result.toFixed(2);
