@@ -45,3 +45,17 @@ numbers.forEach(btn => {
         }
     })
 });
+
+const operators = document.querySelectorAll(".operator");
+operators.forEach(btn => {
+    btn.addEventListener("click", () => {
+        operator = btn.textContent;
+        display.textContent = operator;
+    })
+})
+
+const equal = document.querySelector("#equals");
+equal.addEventListener("click", () => {
+    let result = operate(Number(firstNum), Number(lastNum), operator);
+    display.textContent = result;
+})
