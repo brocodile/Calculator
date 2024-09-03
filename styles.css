@@ -1,0 +1,22 @@
+.numbers{
+    display: flex;
+    width: 530px;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+}
+button{
+    width: 125px;
+    height: 65px;
+    font-size: 28px;
+    font-weight: bold;
+}
+#zero{
+    width: 375px;
+}
+#allClear,#equals{
+    width: 530px;
+    background-color: orange;
+}
+.operator{
+    margin-left: 30px;
+}
