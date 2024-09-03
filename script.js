@@ -49,8 +49,17 @@ numbers.forEach(btn => {
 const operators = document.querySelectorAll(".operator");
 operators.forEach(btn => {
     btn.addEventListener("click", () => {
-        operator = btn.textContent;
-        display.textContent = operator;
+        if((!operator) || (!lastNum)){
+            operator = btn.textContent;
+            display.textContent = operator;
+        }else{
+            let result = operate(Number(firstNum), Number(lastNum), operator);
+            // display.textContent = result.toFixed(2);
+            lastNum = null;
+            operator = btn.textContent;
+            display.textContent = btn.textContent;
+            firstNum = result.toFixed(2);
+        }
     })
 })
 
