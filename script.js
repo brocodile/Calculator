@@ -59,3 +59,11 @@ equal.addEventListener("click", () => {
     let result = operate(Number(firstNum), Number(lastNum), operator);
     display.textContent = result;
 })
+
+const allClear = document.querySelector("#allClear");
+allClear.addEventListener("click", () => {
+    firstNum = null;
+    operator = null;
+    lastNum = null;
+    display.textContent = null;
+})
